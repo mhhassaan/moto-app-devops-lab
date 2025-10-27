@@ -83,5 +83,7 @@ jobs:
       - name: Push image to Docker Hub
         if: github.ref == 'refs/heads/main'
         run: |
+          echo "Pushing as ${{ secrets.DOCKER_USERNAME }}/motopp:latest"
           docker tag motopp-app:ci ${{ secrets.DOCKER_USERNAME }}/motopp:latest
+          docker images
           docker push ${{ secrets.DOCKER_USERNAME }}/motopp:latest
