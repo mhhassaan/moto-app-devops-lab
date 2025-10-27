@@ -5,7 +5,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"   # <— set this
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"   #  set this
       MYSQL_DATABASE: motopp
     volumes:
       - mysql_data:/var/lib/mysql
@@ -23,7 +23,7 @@ services:
     environment:
       SECRET_KEY: ${SECRET_KEY}
       MYSQL_HOST: mysql
-      MYSQL_USER: root                 # <— no MYSQL_PASSWORD here
+      MYSQL_USER: root                 # <— no MYSQL-PASSWORD here
       MYSQL_DATABASE: motopp
       FLASK_ENV: production
     ports:
